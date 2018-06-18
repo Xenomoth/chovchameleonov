@@ -89,9 +89,8 @@
             <h5 class="card-header">Hľadaj</h5>
             <div class="card-body">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Hladám...">
+                <gcse:search></gcse:search>
                 <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Hladať!</button>
                 </span>
               </div>
             </div>
@@ -159,6 +158,17 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="strava.js"></script>
+    <script>
+        (function() {
+            var cx = '008727666313835279987:axlooe3omc8';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
 
   </body>
 
