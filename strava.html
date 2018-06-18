@@ -8,10 +8,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Chov Chameleónov</title>
+    <title>Strava</title>
 
+    <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
     <link href="css/blog-post.css" rel="stylesheet">
 
   </head>
@@ -26,25 +28,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href=".">Úvod
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vyber.html">Výber chameleóna
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="strava.html">Strava chameleóna
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="vyber.html">Výber chameleóna</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="strava.html">Strava chameleóna</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="farba.html">Farba a zdravie</a>
+              <a class="nav-link" href="farba.html">Farba a zdravie
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
     <!-- Page Content -->
     <div class="container">
 
@@ -54,7 +58,7 @@
         <div class="col-lg-8">
 
           <!-- Title -->
-          <h1 class="mt-4 gray"><span class="text-danger">Chov</span><span class="text-secondary"> Chameleónov</span></h1>
+          <h1 class="mt-4">Strava chameleóna</h1>
 
           <!-- Author -->
           <p class="lead">
@@ -64,16 +68,16 @@
 
           <hr>
 
-          <img class="img-fluid rounded" style="width: 65%" src="img/logo.png" alt="">
+          <!-- Preview Image -->
+          <img class="img-fluid rounded" src="img/res.jpg" alt="">
 
           <hr>
 
           <!-- Post Content -->
-          <h1>Chameleóny</h1>
+          <h1></h1>
           <p class="lead">
-            Mladým alebo začínajúcim chovateľom sa odporúča najprv začať s chovom menej problematických plazov, resp. jašterov. Niektoré druhy chameleónov prežívajú v zajatí len niekoľko mesiacov. Mnohé druhy sa však v prírode dožívajú len dva alebo tri roky. V drvivej väčšine prípadov sú z voľnej prírody importované dospelé minimálne rok staré chameleóny, alebo také, ktoré sú tesne pred smrťou. Včasný úhyn zvieratka teda nemusí byť príčinou zlého transportu, ale je prirodzeným a logickým dôsledkom. Ak sa chameleóny odchytia ešte ako mláďatá, dožívajú sa v zajatí oveľa vyššieho veku. Samce sa vo všeobecnosti dožívajú dlhšie ako samičky, čím si u chovateľov získali väčšiu popularitu.
+            V zajatí im podávame cvrčky, muchy, nočné motýle, šváby, lúčne kobylky či cikády. Živia sa aj voľne chyteným hmyzom, dokonca i mláďatami myší. Múčnymi červami ich kŕmime iba výnimočne, pretože sú ťažko stráviteľné. Niektorí jedinci prijímajú aj rastlinnú stravu – paradajky, čerešne, jahody, banán, hrach, jablko.
           </p>
-
         </div>
 
         <!-- Sidebar Widgets Column -->
@@ -124,13 +128,17 @@
               </div>
             </div>
           </div>
-
           <!-- Side Widget -->
           <div class="card my-4">
-            <h5 class="card-header">Slová autora</h5>
+            <h5 class="card-header">Kalkulačka odporúčanej dávky stravy</h5>
             <div class="card-body">
-              <strong>Chov chameleónov</strong> je stránka pre nových alebo začínajúcich chovateľov. Dúfam, že sa vám budú moje rady hodiť.
-          </div>
+              <div onchange="document.getElementById('strava').innerHTML = jedlo(document.getElementById('cham').value)">
+                <p>Zadávaj hmotnosť chameleóna v gramoch, následne stlač potvrdiť a stránka vám napíše koľko stravy by mal chameleon prijať</p>
+                <input id="cham" placeholder="hmotnosť chamíka" type="number">
+                <button class="btn-primary btn" onclick="document.getElementById('strava').innerHTML = jedlo(document.getElementById('cham').value)">Potvrdit</button>
+                <p id="strava"></p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -145,9 +153,9 @@
       </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="strava.js"></script>
 
   </body>
 
