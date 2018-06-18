@@ -3,6 +3,7 @@
 <head>
 <title>Chov Chameleónov</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="default3.css.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -22,8 +23,15 @@
 <div id="content">
   <div id="colOne">
     <h2>Strava chameleóna</h2>
+    <div onchange="document.getElementById('strava').innerHTML = jedlo(document.getElementById('cham').value)">
+      <p>Zadávaj hmotnosť chameleóna v gramoch, následne stlač potvrdiť a stránka vám napíše koľko stravy by mal chameleon prijať</p>
+      <input id="cham" placeholder="hmotnosť chamíka" type="number">
+      <button onclick="document.getElementById('strava').innerHTML = jedlo(document.getElementById('cham').value)">Potvrdit</button>
+      <p id="strava"></p>
+    </div>
     <p>V zajatí im podávame cvrčky, muchy, nočné motýle, šváby, lúčne kobylky či cikády. Živia sa aj voľne chyteným hmyzom, dokonca i mláďatami myší. Múčnymi červami ich kŕmime iba výnimočne, pretože sú ťažko stráviteľné. Niektorí jedinci prijímajú aj rastlinnú stravu – paradajky, čerešne, jahody, banán, hrach, jablko.</p>
-    <p><img src="http://i.sme.sk/cdata/7/58/5801277/chameleon_res.jpg" alt="Potrava" width="405" height="315" class="image" /></p>
+    <p><img src="http://i.sme.sk/cdata/7/58/5801277/chameleon_res.jpg" alt="Potrava" width="405" height="315" class="image" /></p><div>
+  </div>
   </div>
   <div id="colTwo">
     <h3>Druhy Chameleónov</h3>
@@ -36,5 +44,7 @@
     </ul>
   </div>
 </div>
+
 </body>
+<script src="strava.js"></script>
 </html>
